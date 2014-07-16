@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreCommon</name>
+    </assembly>
+    <members>
+        <member name="T:CoreCommon.Const">
+            <summary>
+            Класс содержит общеупотребимые константы
+            </summary>
+        </member>
+        <member name="F:CoreCommon.Const.HELP_PATH">
+            <summary>
+            Путь к файлу помощи
+            </summary>
+        </member>
+        <member name="F:CoreCommon.Const.SETTING_PATH">
+            <summary>
+            Путь к файлу настроек
+            </summary>
+        </member>
+        <member name="F:CoreCommon.Const.APP_DB">
+            <summary>
+            Путь к файлу базы SQLite, в котором хранится история сообщений
+            </summary>
+        </member>
+        <member name="F:CoreCommon.Const.LOG_PATH">
+            <summary>
+            Путь к лог-файлу приложения
+            </summary>
+        </member>
+        <member name="T:CoreCommon.ErrType">
+            <summary>
+            Типы сообщений об ошибке: 
+            <list type="bullet">
+            <item><description>Message - сообещние о предвиденной ошибке в программе</description></item>
+            <item><description>Assert - сообщение о невыполненных краевых условиях </description></item>
+            <item><description>Critical - неперехваченная ошибка</description></item>
+            </list>    
+            </summary>
+        </member>
+        <member name="F:CoreCommon.ErrType.None">
+            <summary>
+            Неопределенный тип
+            </summary>
+        </member>
+        <member name="F:CoreCommon.ErrType.Message">
+            <summary>
+            Сообщение для пользователя
+            </summary>
+        </member>
+        <member name="F:CoreCommon.ErrType.Assert">
+            <summary>
+            Предупреждение
+            </summary>
+        </member>
+        <member name="F:CoreCommon.ErrType.Critical">
+            <summary>
+            Критическая ошибка
+            </summary>
+        </member>
+        <member name="F:CoreCommon.ErrType.Notify">
+            <summary>
+            Уведомление появляющееся в трее, необходимо для этого назначить сообщение
+            </summary>
+        </member>
+        <member name="T:CoreCommon.CoreException">
+            <summary>
+            Класс содержит методы для централизованной обработки исключительных ситуаций
+            </summary>
+        </member>
+        <member name="M:CoreCommon.CoreException.#ctor(CoreCommon.ErrType,System.String)">
+            <summary>
+            Создается класс исключительной ситуации с добавлением информации о типе ошибки и сообщения
+            </summary>
+            <param name="errType">Тип ошибки <see cref="T:CoreCommon.ErrType"/></param>
+            <param name="message">Текст ошибки</param>
+        </member>
+        <member name="M:CoreCommon.CoreException.#ctor(CoreCommon.ErrType,System.String,System.Exception)">
+            <summary>
+            Создается класс исключительной ситуации с добавлением информации о типе ошибки, сообщения и экзепляра предыдущей исключительной ситуации
+            </summary>
+            <param name="errType">Тип ошибки <see cref="T:CoreCommon.ErrType"/></param>
+            <param name="message">Текст ошибки</param>
+            <param name="error">Предыдущая исключительная ситуация</param>
+        </member>
+        <member name="M:CoreCommon.CoreException.#ctor">
+            <summary>
+            Конструктор по умолчанию закрывается
+            </summary>
+        </member>
+        <member name="M:CoreCommon.CoreException.HandleError(System.UnhandledExceptionEventArgs)">
+            <summary>
+            Статическая функция для перехвата исключительной ситуации на самом верхнем уровне
+            </summary>
+            <param name="e">Класс исключительной ситуации</param>
+        </member>
+        <member name="M:CoreCommon.CoreException.HandleError(System.Exception)">
+            <summary>
+            Другая статическая функция для перехвата исключительной ситуации на самом верхнем уровне
+            </summary>
+            <param name="error">Класс исключительной ситуации</param>
+        </member>
+        <member name="M:CoreCommon.CoreException.OnCoreEvent(CoreCommon.CoreEventArgs)">
+            <summary>
+            Обработчик события отображения сообщения об ошибке в трее
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:CoreCommon.CoreException.Msg">
+            <summary>
+            Сообщение об ошибке
+            </summary>
+        </member>
+        <member name="P:CoreCommon.CoreException.Exp">
+            <summary>
+            Экземпляр предыдущей исключительной ситуации
+            </summary>
+        </member>
+        <member name="P:CoreCommon.CoreException.ErrorType">
+            <summary>
+            Тип ошибки
+            </summary>
+        </member>
+        <member name="E:CoreCommon.CoreException.CoreEvent">
+            <summary>
+            Событие для генерации сообщения об ошибке в трее
+            </summary>
+        </member>
+        <member name="T:CoreCommon.CoreEventArgs">
+            <summary>
+            Класс события для отображения сообщения об ошибке в трее
+            </summary>
+        </member>
+        <member name="M:CoreCommon.CoreEventArgs.#ctor(System.String)">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+            <param name="text">Текст сообщения</param>
+        </member>
+        <member name="P:CoreCommon.CoreEventArgs.msg">
+            <summary>
+            Сообщения для вывода в трее
+            </summary>
+        </member>
+        <member name="P:CoreCommon.CoreEventArgs.TimeReached">
+            <summary>
+            Время генерации сообщения
+            </summary>
+        </member>
+        <member name="T:CoreCommon.ComboBoxItem">
+            <summary>
+            Класс для использования в элементах ListBox Combobox и пр.
+            </summary>
+        </member>
+        <member name="M:CoreCommon.ComboBoxItem.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор класса
+            </summary>
+            <param name="id">Идентификатор элемента</param>
+            <param name="name">Имя элемента</param>
+        </member>
+        <member name="M:CoreCommon.ComboBoxItem.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Конструктор класса
+            </summary>
+            <param name="id">Идентификатор элемента</param>
+            <param name="name">Имя элемента</param>
+            <param name="shortName">Краткое наименование элемента</param>
+        </member>
+        <member name="P:CoreCommon.ComboBoxItem.Id">
+            <summary>
+            Идентификатор элемента
+            </summary>
+        </member>
+        <member name="P:CoreCommon.ComboBoxItem.Name">
+            <summary>
+            Имя элемента
+            </summary>
+        </member>
+        <member name="P:CoreCommon.ComboBoxItem.Short">
+            <summary>
+            Краткое наименование элемента
+            </summary>
+        </member>
+        <member name="T:CoreCommon.Log">
+            <summary>
+            Класс содержит функционал для записи сообщения в лог файл.
+            </summary>
+            <remarks>Файл лога формируется автоматически, при создании первой записи. Файл лога располагается в директории установки программы и 
+            имеет то же наименование, что и исполняемый файл, за исключением расширения. Расшиирение файла - .log</remarks>
+        </member>
+        <member name="M:CoreCommon.Log.ToLog(System.String)">
+            <summary>
+            Метод для записи сообщения в лог-файл приложения. Лог файл приложения создается автоматически, при первом обращении, в катаологе установки программы.
+            Файл лога имеет такое же название как и выполняемая программа, но с расширением ".log"
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:CoreCommon.Log.ToFile(System.String,System.String)">
+            <summary>
+            Функция записи в файл. Значение stringValue записывается в конец файла fileName
+            </summary>
+            <param name="stringValue">Строковое значение, которое нужно сохранить в файле fileName</param>
+            <param name="fileName">Имя файла, в конец которого дописывается занчение stirngValue</param>
+        </member>
+        <member name="M:CoreCommon.Log.ReadConfig">
+            <summary>
+            Считывает настройки из файла настроек и сохраняет их в списке.
+            Для корректного считывания, файл должен иметь определенную структуру:
+            данные записываются без пропусков, в формате: Имя_ключа=значение
+            Без пропусков и отступов. 
+            </summary>
+            <returns>Возвращается список параметров настроек</returns>
+        </member>
+        <member name="T:CoreCommon.Messages">
+            <summary>
+            Класс содержит общие функции для вывода сообщений пользователю и вызова справки
+            </summary>
+        </member>
+        <member name="M:CoreCommon.Messages.ShowTip(System.Windows.Forms.Control,System.String,System.String,System.Windows.Forms.ToolTipIcon,System.Int32)">
+            <summary>
+            Отображает для контрола всплывающую подсказку. Подсказка указывает на середину контрола.
+            </summary>
+            <param name="control">Контрол, для которого выводится подсказка</param>
+            <param name="title">Название подсказки</param>
+            <param name="text">Текст подсказки</param>
+            <param name="toolTypeIcon">Иконка подсказки</param>
+            <param name="duration">Длительность отображения в миллисекундах, если задано значение 0 - подсказка отображается до тех пор, пока пользователь на нее не кликнет</param>
+        </member>
+        <member name="M:CoreCommon.Messages.ShowNotify(System.Windows.Forms.NotifyIcon,System.String,System.String,System.Int32,System.Windows.Forms.ToolTipIcon)">
+            <summary>
+            Метод отображет сообщение в трее
+            </summary>
+            <param name="notifyIcon">Экземпляр класса NotifyIcon, для которого выводится сообщение</param>
+            <param name="title">Заголовок сообщения</param>
+            <param name="message">Текст сообщения</param>
+            <param name="toolTipIcon">Значок сообщения "Внимание", "Ошибка" и пр.</param>
+            <param name="duration">Длительность отображения выплывающей подсказки</param>
+        </member>
+        <member name="M:CoreCommon.Messages.GetHelp(System.String,System.Windows.Forms.HelpNavigator)">
+            <summary>
+            Вызов справки программы
+            </summary>
+            <param name="topic">Тема помощи</param>
+            <param name="helpNavigator">Значение в навигаторе</param>
+        </member>
+        <member name="M:CoreCommon.Messages.ShowLog">
+            <summary>
+            Показ лог-файла приложения
+            </summary>
+        </member>
+        <member name="T:CoreCommon.Routins">
+            <summary>
+            Класс содержит общие функции
+            </summary>
+        </member>
+        <member name="M:CoreCommon.Routins.StrIsEmpty(System.String[])">
+            <summary>
+            Проверка массива строк на наличие пустой строки
+            </summary>
+            <param name="strs">Массив строк</param>
+            <returns>true-если в массиве есть пустые строки, false-в обратном случае</returns>
+        </member>
+        <member name="M:CoreCommon.Routins.StringArrayToParagraphText(System.String[])">
+            <summary>
+            Из переданного массива строк создает выходной текст, объединяющий все элемнты массива, так, что каждый элемент массива начинает новый абзац
+            </summary>
+            <param name="arr">Массив строк</param>
+            <returns>Текст содержащий абзацы из каждого элемента массива</returns>
+        </member>
+        <member name="T:CoreCommon.SaveList">
+            <summary>
+            Сохраняемый динамический список. 
+            Предназначен для хранения списка элементов в файловой системе. Программы могут читать и изменять список через 
+            механизм сериализации.
+            Каждому элементу в списке соответствует некоторое число, что-то вроде "индекса цитируемости", его значение
+            зависит от того, сколько раз элемент сохранялся в списке. При добавлении элемента в список, 
+            проверяется его наличие в этом списке, и если элемент найден, то изменяется связанный с ним 
+            "индекс цитируемости", если элемент не найден, то создается новый элемент, и с ним
+            связывается "индекс цитируемости" минимального значения.                     
+            При создании списка, можно указать его глубину - количество сохраняемых в списке элементов. 
+            До тех пор пока количество размещенных в списке элементов меньше его глубины, новые элементы продолжают добавляються. 
+            Когда же достигнута максимальная глубина, то новый элемент - добавляется, а один из старых - удаляется. 
+            Удаляться будет тот, чей "индекс цитируемости" минимален.
+            </summary>
+        </member>
+        <member name="M:CoreCommon.SaveList.#ctor">
+            <summary>
+            Конструктор по умолачанию
+            </summary>
+        </member>
+        <member name="M:CoreCommon.SaveList.#ctor(System.Int32)">
+            <summary>
+            Конструктор задающий колличество поддерживаемых списком значений
+            </summary>
+            <param name="startItemCount">Кличество элементов поддерживаемых списком. По умолчанию 10</param>
+        </member>
+        <member name="M:CoreCommon.SaveList.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструтор задающий количество элементов поддерживаемых списком и максимальный индекс, при достижении
+            которого, будет произведена реорганизация индекса.
+            </summary>
+            <param name="startItemCount">Число элементов списка</param>
+            <param name="reorganizeSize">Максимальный размер индекса, по достижении которого будет произведена реогранизация индекса</param>
+        </member>
+        <member name="M:CoreCommon.SaveList.Add(CoreCommon.SaveItem)">
+            <summary>
+            Добавление элемента в список
+            </summary>
+            <param name="item">Элемент списка</param>
+        </member>
+        <member name="P:CoreCommon.SaveList.ListItems">
+            <summary>
+            Возвращает коллекцию элементов
+            </summary>
+        </member>
+        <member name="P:CoreCommon.SaveList.StartItemCount">
+            <summary>
+            Количество элементов поддерживаемых списком
+            </summary>
+        </member>
+        <member name="P:CoreCommon.SaveList.ReorganizeSize">
+            <summary>
+            Максимальный размер индекса, по достижении которого будет произведена реогранизация индекса
+            </summary>
+        </member>
+        <member name="T:CoreCommon.SaveItem">
+            <summary>
+            Класс представляющий элемент для сохранения в списке
+            </summary>
+        </member>
+        <member name="M:CoreCommon.SaveItem.#ctor">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+        </member>
+        <member name="M:CoreCommon.SaveItem.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="id">Идентификатор элемента</param>
+            <param name="name">Имя элемента</param>
+        </member>
+        <member name="M:CoreCommon.SaveItem.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="id">Идентификатор элемента</param>
+            <param name="name">Имя элемента</param>
+            <param name="altName">Краткое наименование элемента</param>
+        </member>
+        <member name="M:CoreCommon.SaveItem.CompareTo(System.Object)">
+            <summary>
+            Сравнение двух элементов списка
+            </summary>
+            <param name="obj">Элемент для сравнения</param>
+            <returns>True - если элементы одинаковы, false - в обратном случае</returns>
+        </member>
+        <member name="M:CoreCommon.SaveItem.Equals(System.Object)">
+            <summary>
+            Метод сравнения
+            </summary>
+            <param name="obj">Элемент для сравнения</param>
+            <returns>True - если элементы одинаковы, false - в обратном случае</returns>
+        </member>
+        <member name="M:CoreCommon.SaveItem.GetHashCode">
+            <summary>
+            Хэш элемента
+            </summary>
+            <returns>Значение хэша</returns>
+        </member>
+        <member name="M:CoreCommon.SaveItem.op_Equality(CoreCommon.SaveItem,CoreCommon.SaveItem)">
+            <summary>
+            Перекрытый оператор сравнения элеметов
+            </summary>
+            <param name="saveItem1">Первый элемент</param>
+            <param name="saveItem2">Второй элемент</param>
+            <returns>True - если элементы одинаковы, false - в обратном случае</returns>
+        </member>
+        <member name="M:CoreCommon.SaveItem.op_Inequality(CoreCommon.SaveItem,CoreCommon.SaveItem)">
+            <summary>
+            Перекрытый оператор неравенства
+            </summary>
+            <param name="saveItem1">Первый элемент</param>
+            <param name="saveItem2">Второй элемент</param>
+            <returns>True - если элементы неодинаковы, false - в обратном случае</returns>
+        </member>
+        <member name="M:CoreCommon.SaveItem.op_LessThan(CoreCommon.SaveItem,CoreCommon.SaveItem)">
+            <summary>
+            Перекрытый оператор "меньше"
+            </summary>
+            <param name="saveItem1">Первый элемент</param>
+            <param name="saveItem2">Второй элемент</param>
+            <returns>True - если первый элемент меньше, false - в обратном случае</returns>
+        </member>
+        <member name="M:CoreCommon.SaveItem.op_GreaterThan(CoreCommon.SaveItem,CoreCommon.SaveItem)">
+            <summary>
+            Перекрытый оператор "больше"
+            </summary>
+            <param name="saveItem1">Первый элемент</param>
+            <param name="saveItem2">Второй элемент</param>
+            <returns>True - если первый элемент больше, false - в обратном случае</returns>
+        </member>
+        <member name="P:CoreCommon.SaveItem.Id">
+            <summary>
+            Идентификатор элемента
+            </summary>
+        </member>
+        <member name="P:CoreCommon.SaveItem.Name">
+            <summary>
+            Имя элемента
+            </summary>
+        </member>
+        <member name="P:CoreCommon.SaveItem.AltName">
+            <summary>
+            Альтернативное имя элемнта
+            </summary>
+        </member>
+        <member name="P:CoreCommon.SaveItem.Count">
+            <summary>
+            Количество элементов
+            </summary>
+        </member>
+        <member name="T:CoreCommon.CoreSerialize">
+            <summary>
+            Класс содержит функции позволяющие выполнять сериализацию нужных объектов
+            </summary>
+        </member>
+        <member name="M:CoreCommon.CoreSerialize.Serialize(System.String,System.Object)">
+            <summary>
+            Сериализация объекта obj в файл fileName
+            </summary>
+            <param name="fileName">Имя файла, куда сериализуется объект obj</param>
+            <param name="obj">Объект для сериализации в файл fileName</param>
+        </member>
+        <member name="M:CoreCommon.CoreSerialize.Deserialize(System.String)">
+            <summary>
+            Восстановление объекта в соответствии с сохраненным состоянием из файла fileName
+            </summary>
+            <param name="fileName">Имя файла, откуда восстанавливается состояние объекта</param>
+            <returns>Восстановленный объект</returns>
+            <remarks>При использовании функции нужно знать, тип объкта для которого восстанавливается состояние. Функцию нужно использовать в блоке try catch, на случай
+            возникновения исключительной ситуации при несовпадении типов</remarks>
+        </member>
+    </members>
+</doc>

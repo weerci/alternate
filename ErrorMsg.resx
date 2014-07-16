@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EAdmEditHash" xml:space="preserve">
+    <value>Ошибка при редактировании ключевого слова</value>
+  </data>
+  <data name="EAdmGetHash" xml:space="preserve">
+    <value>Ошибка при получении ключевого слова</value>
+  </data>
+  <data name="EAdmKeyPressAsync" xml:space="preserve">
+    <value>Ошибка создания ключа для типографии.</value>
+  </data>
+  <data name="EAdmKeyPressEditAsync" xml:space="preserve">
+    <value>Ошибка при редактировании данных ключа.</value>
+  </data>
+  <data name="EAdmKeyPressGetAsync" xml:space="preserve">
+    <value>Ошибка при получении данных ключа.</value>
+  </data>
+  <data name="EAdmKeySaleAsync" xml:space="preserve">
+    <value>Ошибка создания ключа для платежной системы</value>
+  </data>
+  <data name="EAdmKeySaleEditAsync" xml:space="preserve">
+    <value>Ошибка при редактировании ключа</value>
+  </data>
+  <data name="EAdmKeySaleGetAsync" xml:space="preserve">
+    <value>Ошибка при получении данных ключа</value>
+  </data>
+  <data name="EAdmRightError" xml:space="preserve">
+    <value>Пользователь не обладает правами на выполнение операции.
+Обратитесь к администратору базы данных.</value>
+  </data>
+  <data name="EAdmSetHashWord" xml:space="preserve">
+    <value>Ошибка создания ключеовго слова md5</value>
+  </data>
+  <data name="EAppDoubleApplication" xml:space="preserve">
+    <value>Попытка запуска второго экземпляра приложения</value>
+  </data>
+  <data name="ECardList" xml:space="preserve">
+    <value>Ошбика получения списка карточек проекта</value>
+  </data>
+  <data name="ECardLoad" xml:space="preserve">
+    <value>Ошибка при получении карточки</value>
+  </data>
+  <data name="ECardUnoad" xml:space="preserve">
+    <value>Ошибка при удалении карточкек проекта</value>
+  </data>
+  <data name="ECardUnoadToPress" xml:space="preserve">
+    <value>Ошибка при попыке выгрузить карточки в типографию</value>
+  </data>
+  <data name="EDbConnect" xml:space="preserve">
+    <value>Ошибка соединения с базой данных</value>
+  </data>
+  <data name="EDbEmptyDbName" xml:space="preserve">
+    <value>Имя базы данных не должно быть пустым</value>
+  </data>
+  <data name="EDbEmptyServerName" xml:space="preserve">
+    <value>Имя сервера не должно быть пустым</value>
+  </data>
+  <data name="EDbEmptyUserName" xml:space="preserve">
+    <value>Логин пользователя не может быть пустым</value>
+  </data>
+  <data name="EDbErrorCertificate" xml:space="preserve">
+    <value>Истек ключ действия сертификата доступа</value>
+  </data>
+  <data name="EDbNotAccessToServer" xml:space="preserve">
+    <value>Нет доступа к базам выбранного сервера</value>
+  </data>
+  <data name="EDbNullParam" xml:space="preserve">
+    <value>Параметр не может иметь значение Null</value>
+  </data>
+  <data name="EDbStartTransaction" xml:space="preserve">
+    <value>Ошибка старта новой транзакции</value>
+  </data>
+  <data name="EDcDeleteDictionary" xml:space="preserve">
+    <value>Ошибка при удалении элементов спрвочника</value>
+  </data>
+  <data name="EDcInsertDictionary" xml:space="preserve">
+    <value>Ошибка добавления записи в справочник</value>
+  </data>
+  <data name="EDcOpenDictionary" xml:space="preserve">
+    <value>Ошибка открытия справочника</value>
+  </data>
+  <data name="EDcSaveDesign" xml:space="preserve">
+    <value>Ошбика при попытке сохранения макета дизайна</value>
+  </data>
+  <data name="EDcSaveUser" xml:space="preserve">
+    <value>Ошибка при попытке сохранить пользователя</value>
+  </data>
+  <data name="EDcUniqueDesign" xml:space="preserve">
+    <value>Имена дизайнов не должны повторяться !</value>
+  </data>
+  <data name="EDcUniqueJuristic" xml:space="preserve">
+    <value>Название юр. лица должно быть уникально !</value>
+  </data>
+  <data name="EDcUniqueOperationName" xml:space="preserve">
+    <value>Названия операций не должны повторяться !</value>
+  </data>
+  <data name="EDcUniquePayment" xml:space="preserve">
+    <value>Название платежной системы и ее префикс, должны быть уникальными !</value>
+  </data>
+  <data name="EDcUniqueStatusName" xml:space="preserve">
+    <value>Названия статусов не должны повторяться !</value>
+  </data>
+  <data name="EDcUniqueUserName" xml:space="preserve">
+    <value>Имя пользователя должно быть уникально !</value>
+  </data>
+  <data name="EDcUpdateDictionary" xml:space="preserve">
+    <value>Ошибка обновления элементов справочника</value>
+  </data>
+  <data name="EFileNotFound" xml:space="preserve">
+    <value>Файл не найден</value>
+  </data>
+  <data name="EFileOpen" xml:space="preserve">
+    <value>Ошибка открытия файла</value>
+  </data>
+  <data name="EMsgDesignEmpty" xml:space="preserve">
+    <value>Поле "Дизайн" не должно быть пустым !</value>
+  </data>
+  <data name="EMsgDigitOnly" xml:space="preserve">
+    <value>В поле можно вводить только цифры !</value>
+  </data>
+  <data name="EMsgJuristicEmpty" xml:space="preserve">
+    <value>Поле "Заказчик" не должно быть пустым !</value>
+  </data>
+  <data name="EMsgPaymentEmpty" xml:space="preserve">
+    <value>Поле "Платежная система" не должно быть пустым !</value>
+  </data>
+  <data name="EMsgProjectNameEmpty" xml:space="preserve">
+    <value>Поле "Имя проекта" не может быть пустым !</value>
+  </data>
+  <data name="EMsgProjectNumberEmpty" xml:space="preserve">
+    <value>Поле "Номер проекта" не может быть пустым !</value>
+  </data>
+  <data name="EPrDelete" xml:space="preserve">
+    <value>Ошибка при удалении проекта</value>
+  </data>
+  <data name="EPrFileCardBaseDublicate" xml:space="preserve">
+    <value>В файле найдены дубликаты номеров карт, уже внесенных в базу: {0}</value>
+  </data>
+  <data name="EPrFileCardDublicate" xml:space="preserve">
+    <value>В файле найдены дубликаты номеров карт</value>
+  </data>
+  <data name="EPrFileCardHeader" xml:space="preserve">
+    <value>Файл должен содержать столбцы {0}</value>
+  </data>
+  <data name="EPrInsert" xml:space="preserve">
+    <value>Ошибка при создании проекта</value>
+  </data>
+  <data name="EPrList" xml:space="preserve">
+    <value>Ошибка получения списка проектов</value>
+  </data>
+  <data name="EPrLoad" xml:space="preserve">
+    <value>Ошибка при получении проекта</value>
+  </data>
+  <data name="EPrUpdate" xml:space="preserve">
+    <value>Ошибка при редактировании проекта</value>
+  </data>
+</root>

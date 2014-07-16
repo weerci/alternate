@@ -1,0 +1,28 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Alternative.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CardColumns" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;num;System.Int64;unique&lt;/string&gt;
+  &lt;string&gt;pin;System.String;&lt;/string&gt;
+  &lt;string&gt;nom;System.Int32;&lt;/string&gt;
+  &lt;string&gt;date_s;System.DateTime;&lt;/string&gt;
+  &lt;string&gt;date_e;System.DateTime;&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1123/omGRVKvV5iQb7nkh2CNpgoAmMQWTzgdoWt4xHerx0axUCg2g72uDTTE2GuLi5qr9UkRdOCGTWWo9TsNeYPR/laWksjeSkgA3SlDylkKQnU=</Value>
+    </Setting>
+    <Setting Name="edt" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="CountRepeatGetState" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="IntervalGetState" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
